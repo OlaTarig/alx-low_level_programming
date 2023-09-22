@@ -1,31 +1,32 @@
 #include "main.h"
 
 /**
- * print_number - print numbers chars
- * @n: integer params
- * Return: 0
+ * print_number - print any integer using putchar
+ * @n: integer to be printed
  */
 
 void print_number(int n)
 {
-	unsigned int n1;
+	int count, y, k;
 
-	n1 = n;
+	y = 1000000000;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n1 = -n;
-	}
-
-	if (n1 / 10 != 0)
-	{
-		_putchar(n1 / 10);
-		_putchar(n1 % 10);
-	}
-	else
-	{
-		_putchar(n1 / 10);
+	if (n == 0)
 		_putchar('0');
+	else if (n > 0)
+		n *= -1;
+	else
+		_putchar('-');
+	for (count = 0; count < 10; count++, y /= 10)
+	{
+		if (n / y == 0)
+			continue;
+		else
+		{
+			k = (-(n / y) % 10);
+			if (k < 0)
+				k *= -1;
+			_putchar(k + '0');
+		}
 	}
 }
