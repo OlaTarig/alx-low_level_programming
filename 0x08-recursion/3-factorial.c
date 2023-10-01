@@ -1,4 +1,4 @@
-#include<main.h>
+#include "main.h"
 /**
 * factorial - check the code
 *@n:int
