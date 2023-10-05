@@ -11,17 +11,19 @@ char *ptr;
 unsigned int i = 0;
 unsigned int j;
 
-while (str[i] != '\0')
-{
-i++;
-}
 if (str == NULL)
 {
 return (NULL);
 }
+while (str[i] != '\0')
+{
+i++;
+}
 ptr = malloc(i *sizeof(char));
 if (ptr == NULL)
+{
 return (NULL);
+}
 for (j = 0; j < i; j++)
 {
 ptr[j] = str[j];
