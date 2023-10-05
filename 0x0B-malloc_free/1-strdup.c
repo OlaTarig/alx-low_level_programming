@@ -19,14 +19,14 @@ while (str[i] != '\0')
 {
 i++;
 }
-ptr = malloc(i *sizeof(char));
+ptr = malloc((i + 1) *sizeof(char));
 if (ptr == NULL)
 {
 return (NULL);
 }
-for (j = 0; j <= i; j++)
+for (j = 0; j < i; j++)
 {
 ptr[j] = str[j];
 }
-return (ptr + 1);
+return (ptr);
 }
