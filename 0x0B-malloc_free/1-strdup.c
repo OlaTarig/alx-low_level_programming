@@ -28,5 +28,5 @@ for (j = 0; j <= i; j++)
 {
 ptr[j] = str[j];
 }
-return (ptr);
+return (ptr + 1);
 }
