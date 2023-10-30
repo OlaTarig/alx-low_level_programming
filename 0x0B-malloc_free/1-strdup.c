@@ -13,6 +13,11 @@ int len = 0;
 int j = 0;
 int i;
 
+if (str == NULL)
+{
+printf("failed to allocate memory\n");
+return (NULL);
+}
 while (str[j] != '\0')
 {
 len++;
