@@ -15,7 +15,6 @@ int i;
 
 if (str == NULL)
 {
-printf("failed to allocate memory\n");
 return (NULL);
 }
 while (str[j] != '\0')
